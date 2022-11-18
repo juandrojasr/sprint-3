@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Casa Royal</title>
+</head>
+
+<body>
+    <main>
+        <section class="section-main">
+            <div class="info-menu">
+            </div>
+            <header class="container-menu">
+                <div>
+                    <img class="logo" src="img/header/Logo.png">
+                </div>
+                <div class="container-menu">
+                    <ul class="Menu">
+                        <li> HOMEPAGE</li>
+                        <li>PROPERTIES</li>
+                        <li>AGENCIES</li>
+                        <li>PAGES</li>
+                        <li>ABOUT</li>
+                        <li>CONTACT</li>
+                        <li>COMPARE</li>
+                    </ul>
+                </div>
+            </header>
+
+            <section>
+                <div class="container-search">
+                    <div class="container-menu">
+                        <div>
+                            <div class="title-search">
+                                <h1>Let Us Guide You Home</h1>
+                                <p>Find the house of your dreams</p>
+                            </div>
+                            <form action="Busqueda.html" class="form">
+                                <div class="container-select">
+                                    <label for="type" class="label">Tipo:</label>
+                                    <select name="type" class="selects">
+                                        <option value="select" disabled selected></option>
+                                        <option value="Casa">Casa</option>
+                                        <option value="Finca">Finca</option>
+                                        <option value="Local">Local</option>
+                                        <option value="Apartamento">Apartamento</option>
+                                    </select>
+                                </div>
+                                <div class="container-select">
+                                    <label for="status" class="label">Estado:</label>
+                                    <select name="status" class="selects">
+                                        <option value="select" disabled selected></option>
+                                        <option value="Venta">Venta</option>
+                                        <option value="Renta">Renta</option>
+                                    </select>
+                                </div>
+                                <div class="container-select ancho">
+                                    <input name="q" type="text" class="search" placeholder="Busca Propiedades">
+                                </div>
+                                <button type="submit">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <span class="title-head">CASAROYAL REAL ESTATE AGENCY</span>
+            <h2 class="title"><strong>Featured</strong> Properties</h2>
+            <div id="container-cards"></div>
+        </section>
+        <div class="relleno" id="propertiesby"><img class="img-relleno" src="img/pages/Section - Properties by Area.png">
+        </div>
+        <div class="relleno" id="ourteam"><img class="img-relleno" src="img/pages/Section - Our Team.png"></div>
+        <div class="relleno" id="sellproperty"><img class="img-relleno" src="img/pages/Section - Sell Property.png">
+        </div>
+        <div class="relleno" id="angencies"><img class="img-relleno" src="img/pages/Section - Agencies.png"></div>
+        <div class="relleno" id="newss"><img class="img-relleno" src="img/pages/Section - News.png"></div>
+        <div class="relleno" id="values"><img class="img-relleno" src="img/pages/Section - Our Values.png"></div>
+        <div class="relleno" id="testimonialss"><img class="img-relleno" src="img/pages/Section - Testimonials.png" alt="">
+        </div>
+        <div class="relleno" id="footer"><img class="img-relleno" src="img/pages/Footer.png"></div>
+
+    </main>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

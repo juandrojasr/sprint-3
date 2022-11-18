@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="text-section">
+    <p>CASAROYAL REAL ESTATE AGENCY</p>
+    <h1>Hot Deal</h1>
+  </div>
+  <div class="property">
+    <div class="property-photo">
+      <div class="property-photo-count"></div>
+    </div>
+    <div class="property-info">
+      <p class="property-name"></p>
+      <p class="property-name-info"></p>
+      <p class="property-location"></p>
+      <button class="property-price"></button>
+      <span class="property-circle"></span>
+      <div class="property-features">
+        <div class="icons">
+          <img src="img/icons/Area Icon.png" class="icons">
+          <span class="area"></span>
+        </div>
+        <div class="icons">
+          <img src="img/icons/Bedroom Icon.png" class="icons">
+          <span class="rooms"></span>
+        </div>
+        <div class="icons">
+          <img src="img/icons/Bathroom Icon.png" class="icons">
+          <span class="baño"></span>
+        </div>
+        <div class="icons">
+          <img src="img/icons/Garage Icon.png" class="icons">
+          <span class="parking"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    import { getPropertiesById } from "./server.js"
+    let id = window.location.search.split("=")[1];
+    getPropertiesById(id).then((data) => {
+      document.querySelector(".parking").innerHTML = data.parking
+      document.querySelector(".property-location").innerHTML = data.location
+      document.querySelector(".property-photo").style.backgroundImage = `url(img/properties/${data.img})`
+      document.querySelector(".property-name").innerHTML = data.location;
+      document.querySelector(".property-name-info").innerHTML = data.general_details;
+      document.querySelector(".property-price").innerHTML = `From $ ${data.price} Per Month`
+      document.querySelector(".area").innerHTML = data.measure
+      document.querySelector(".rooms").innerHTML = data.rooms
+      document.querySelector(".baño").innerHTML = data.bathrooms
+    });
+  </script>
+</body>
+
+</html>

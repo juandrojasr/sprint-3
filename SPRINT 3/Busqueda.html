@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container-cards" class="container-cards"></div>
+    <script type="module">
+        import { getPropietiesFilter } from "./server.js"
+        import { createCards } from "./Cartas.js"
+
+        let search = window.location.search;
+
+        getPropietiesFilter(search).then((data) => {
+            const container = document.querySelector("#container-cards");
+            data.forEach((e) => {
+                const card = createCards(e);
+                container.innerHTML += card;
+            });
+        });
+    </script>
+</body>
+
+</html>
